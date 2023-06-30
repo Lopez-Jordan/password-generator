@@ -14,7 +14,7 @@ Here is the link to the deployed website:
 
 Credits to UC Berkeley Fullstack coding bootcamp repository:
 <br>
-[Click Here for link](https://github.com/coding-boot-camp/urban-octo-telegram)
+[Click Here for link](https://lopez-jordan.github.io/password-generator/)
 
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
