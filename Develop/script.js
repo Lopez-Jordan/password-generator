@@ -1,7 +1,3 @@
-
-var generateBtn = document.querySelector("#generate");
-
-
 //Function for finding length
 function findLength(){
   var responseLength = prompt("What length do you want the password to be (8 to 128 characters)");
@@ -79,6 +75,42 @@ function findSpecial(){
   }
 }
 
+
+
+
+
+
+
+
+function generatePassword(len, low, up, num, spec){
+  var pass;
+  var valsLower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  var valsUpper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+  var valsNumeric = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var valsSpecial = ["!", "@", "#", "$", "%", "&", "*", "(", ")", "-"];
+  var library;
+  var libraryLength;
+  if (low == true && up == false && num == false && spec == false){
+    library = valsLower;
+    libraryLength = 26;
+  }
+  else if (low == true && up == true && num == false && spec == false){
+    library = valsLower.concat(valsUpper);
+    libraryLength = 52;
+  }
+  else if (low == true && up == true && num == true && spec == false){
+    library = (valsLower.concat(valsUpper)).concat(valsNumeric);
+    libraryLength = 61;
+  }
+  else if (low == true && up == true && num == true && spec == true){
+    library = ((valsLower.concat(valsUpper)).concat(valsNumeric)).concat(valsSpecial);
+    libraryLength = 71;
+  }
+  console.log(library);
+
+
+  return pass;
+}
 // Write password to the #password input
 function writePassword() {
   var length = findLength(); //num in range (8-128)
@@ -86,9 +118,17 @@ function writePassword() {
   var upper = findUpper(); //boolean value
   var numeric = findNumeric(); //boolean value
   var special = findSpecial(); //boolean value
+  if (lower == false && upper == false && numeric == false && special == false){
+    while (lower == false && upper == false && numeric == false && special == false){
+      alert("You must choose atleast uppercase, lowercase, numeric or special character for me to generate a password!")
+      lower = findLower(); // boolean value
+      upper = findUpper(); //boolean value
+      numeric = findNumeric(); //boolean value
+      special = findSpecial(); //boolean value
+    }
+  }
 
-
-  var password = generatePassword();
+  var password = generatePassword(length, lower, upper, numeric, special);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -96,4 +136,5 @@ function writePassword() {
 }
 
 // Add event listener to generate button
+var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
