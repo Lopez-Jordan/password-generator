@@ -172,11 +172,9 @@ function writePassword() {
       special = findSpecial(); //boolean value
     }
   }
-
   var password = generatePassword(length, lower, upper, numeric, special);
   console.log(password);
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
