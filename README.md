@@ -8,13 +8,8 @@ For this project, I was able to utilize my newly learned javascript skills in or
 
 Here is the link to the deployed website: 
 <br>
-[Click Here for link](https://lopez-jordan.github.io/second-portfolio-project/)
-
-## Credits
-
-Credits to UC Berkeley Fullstack coding bootcamp repository:
-<br>
 [Click Here for link](https://lopez-jordan.github.io/password-generator/)
+
 
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
