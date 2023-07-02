@@ -139,8 +139,8 @@ function generatePassword(len, low, up, num, spec){
     libraryLength = 19;
   }
   else if (low == true && up == false && num == true && spec == true){ //14
-    library = (valsLower.concat(valsNumeric)).concat(valsSpecial);
-    libraryLength = 10;
+    library = valsLower.concat(valsNumeric).concat(valsSpecial);
+    libraryLength = 36;
   }
   else if (low == false && up == true && num == true && spec == true){ //15
     library = (valsUpper.concat(valsNumeric)).concat(valsSpecial);
