@@ -2,7 +2,7 @@
 
 ## Description 
 
-For this project, I was able to utilize my newly learned javascript skills in order to prompt the user for password and output a customized password based on the user's criteria. This project took me a long time because I am still learning how javascript interacts with html elements. Try it out! It also corrects for invalid input, so try doing that aswell!
+For this project, I was able to utilize my newly learned javascript skills in order to prompt the user for a password and output a customized password based on the user's criteria. This project took me a long time because I am still learning how javascript interacts with html elements. Try it out! It also corrects for invalid input, so try doing that as well!
 <br>
 ![Picture of my deployed website](./Develop/screenshot.png)
 
